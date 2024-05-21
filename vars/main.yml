@@ -1,0 +1,16 @@
+acme_challenge_type: dns-01
+acme_version: 2
+acme_email: email@somedomain.com
+
+# Uncomment this section for production letsencryt servers
+#acme_directory: https://acme-v02.api.letsencrypt.org/directory
+#acme_account_key: account/prd-account.key
+
+# Uncomment this section for staging letsencrypt servers
+acme_directory: https://acme-staging-v02.api.letsencrypt.org/directory
+acme_account_key: account/stg-account.key
+
+dnsmadeeasy_api_key: <api-key-goes-here>
+dnsmadeeasy_secret_key: <api-secret-goes-here>
+
+domain_name: somehost.somedomain.com
