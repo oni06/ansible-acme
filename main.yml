@@ -163,3 +163,12 @@
         state: present
         mode: '0600'
 
+    - name: Create JKS
+      community.general.java_keystore:
+        name: "{{ domain_name }}"
+        dest: certs/{{ domain_name }}/cert.jks
+        keystore_type: "jks"
+        certificate_path: certs/{{ domain_name }}/fullchain.pem
+        private_key_path: certs/{{ domain_name }}/privkey.pem
+        private_key_passphrase: "{{ lookup('ansible.builtin.password', 'certs/{{ domain_name }}/passphrase.txt', length=25) }}"
+        password: changeit
